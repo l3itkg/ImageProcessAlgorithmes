@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{873BD5B2-AE5F-46E0-9EE6-F8E9D46BFF19}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Plugins</RootNamespace>
+    <AssemblyName>Plugins</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomFilter\CustomFilterFactory.cs" />
+    <Compile Include="CustomFilter\CustomFilterParameter.cs" />
+    <Compile Include="CustomFilter\CustomFilterPlugin.cs" />
+    <Compile Include="CustomFilter\CustomFilterParametrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomFilter\CustomFilterParametrForm.Designer.cs">
+      <DependentUpon>CustomFilterParametrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GaussianBlur\GaussianBlurFactory.cs" />
+    <Compile Include="GaussianBlur\GaussianBlurParameter.cs" />
+    <Compile Include="GaussianBlur\GaussianBlurPlugin.cs" />
+    <Compile Include="GaussianBlur\GlassBlurParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GaussianBlur\GlassBlurParameterForm.Designer.cs">
+      <DependentUpon>GlassBlurParameterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Glass\GlassFactory.cs" />
+    <Compile Include="Glass\GlassParameter.cs" />
+    <Compile Include="Glass\GlassParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Glass\GlassParameterForm.Designer.cs">
+      <DependentUpon>GlassParameterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Glass\GlassPlugin.cs" />
+    <Compile Include="GrayWorld\GrayWorldFactory.cs" />
+    <Compile Include="GrayWorld\GrayWorldParameter.cs" />
+    <Compile Include="GrayWorld\GrayWorldPlugin.cs" />
+    <Compile Include="LinearBrightnessChanel\LinearBrightnessChanelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LinearBrightnessChanel\LinearBrightnessChanelForm.Designer.cs">
+      <DependentUpon>LinearBrightnessChanelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinearBrightnessChanel\LinearBrightnessChannelFactory.cs" />
+    <Compile Include="LinearBrightnessChanel\LinearBrightnessChannelParemeter.cs" />
+    <Compile Include="LinearBrightnessChanel\LinearBrightnessChannelPlugin.cs" />
+    <Compile Include="MedianFilter\MedianFilterFactory.cs" />
+    <Compile Include="MedianFilter\MedianFilterParameter.cs" />
+    <Compile Include="MedianFilter\MedianFilterParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedianFilter\MedianFilterParameterForm.Designer.cs">
+      <DependentUpon>MedianFilterParameterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MedianFilter\MedianFilterPlugin.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rotation\RotationFactory.cs" />
+    <Compile Include="Rotation\RotationParameter.cs" />
+    <Compile Include="Rotation\RotationParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rotation\RotationParameterForm.Designer.cs">
+      <DependentUpon>RotationParameterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rotation\RotationPlugin.cs" />
+    <Compile Include="Scale\ScaleFactory.cs" />
+    <Compile Include="Scale\ScaleParameter.cs" />
+    <Compile Include="Scale\ScaleParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scale\ScaleParameterForm.Designer.cs">
+      <DependentUpon>ScaleParameterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\ScalePlugin.cs" />
+    <Compile Include="SobelEdgeDetect\SobelEdgeDetectFactory.cs" />
+    <Compile Include="SobelEdgeDetect\SobelEdgeDetectParameter.cs" />
+    <Compile Include="SobelEdgeDetect\SobelEdgeDetectPlugin.cs" />
+    <Compile Include="SobelEdgeDetect\SobelEdgeDetectPluginParameterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SobelEdgeDetect\SobelEdgeDetectPluginParameterForm.Designer.cs">
+      <DependentUpon>SobelEdgeDetectPluginParameterForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{942CE6FC-C862-4661-8F3C-64D38DB609F6}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomFilter\CustomFilterParametrForm.resx">
+      <DependentUpon>CustomFilterParametrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GaussianBlur\GlassBlurParameterForm.resx">
+      <DependentUpon>GlassBlurParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Glass\GlassParameterForm.resx">
+      <DependentUpon>GlassParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinearBrightnessChanel\LinearBrightnessChanelForm.resx">
+      <DependentUpon>LinearBrightnessChanelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedianFilter\MedianFilterParameterForm.resx">
+      <DependentUpon>MedianFilterParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rotation\RotationParameterForm.resx">
+      <DependentUpon>RotationParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\ScaleParameterForm.resx">
+      <DependentUpon>ScaleParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SobelEdgeDetect\SobelEdgeDetectPluginParameterForm.resx">
+      <DependentUpon>SobelEdgeDetectPluginParameterForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
